@@ -222,7 +222,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # USB controller setup
 PRODUCT_PROPERTY_OVERRIDES += \
-    sys.usb.controller=msm_hsusb \
+    sys.usb.controller=ci_hdrc.0 \
     sys.usb.rndis.func.name=rndis_bam
 
 # WiFi MAC address path

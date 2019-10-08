@@ -48,6 +48,9 @@ on boot
     # to one of the CPU from the default IRQ affinity mask.
     write /proc/irq/default_smp_affinity f
 
+    exec - root root -- iw dev wlan0 interface add wlan1 type __ap
+    exec - root root -- ip link set up wlan1
+
 on property:bluetooth.isEnabled=true
     write /sys/class/bluetooth/hci0/idle_timeout 7000
 

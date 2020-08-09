@@ -128,13 +128,6 @@ PRODUCT_PACKAGES += \
     sound_trigger.primary.msm8952 \
     audio.primary.msm8952
 
-# GFX
-PRODUCT_PACKAGES += \
-    copybit.msm8952 \
-    gralloc.msm8952 \
-    hwcomposer.msm8952 \
-    memtrack.msm8952
-
 # BCM Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \

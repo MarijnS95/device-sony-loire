@@ -30,6 +30,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 
 BOARD_KERNEL_CMDLINE += androidboot.bootdevice=7824900.sdhci
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Serial console
 #BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0x7af0000 restore_msm_uart=0x01014000
@@ -46,3 +47,6 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := system/vendor
 
 include device/sony/common/CommonConfig.mk
+
+# Overwrite cmdline
+BOARD_KERNEL_CMDLINE := oemandroidboot.babe09a9=1 earlycon=msm_serial_dm,0x7af0000 androidboot.bootdevice=7824900.mmc user_debug=254 androidboot.hardware=suzu buildvariant=userdebug androidboot.selinux=permissive no_console_suspend kpti=0 maxcpus=2 loglevel=7 deferred_probe_timeout=4 printk.devkmsg=on

@@ -15,8 +15,6 @@
 # Platform path
 PLATFORM_COMMON_PATH := device/sony/loire
 
-TARGET_LEGACY_KEYMASTER := true
-
 SOMC_PLATFORM := loire
 
 PRODUCT_PLATFORM_SOD := true

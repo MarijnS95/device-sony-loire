@@ -123,25 +123,6 @@ PRODUCT_PACKAGES += \
     init.loire.pwr \
     ueventd
 
-# Audio
-PRODUCT_PACKAGES += \
-    sound_trigger.primary.msm8952 \
-    audio.primary.msm8952
-
-# BCM Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl \
-    android.hardware.bluetooth@1.0-service \
-    libbt-vendor
-
-# GPS
-PRODUCT_PACKAGES += \
-    gps.msm8952
-
-# CAMERA
-PRODUCT_PACKAGES += \
-    camera.msm8952
-
 # Fluence
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.fluencetype=fluence

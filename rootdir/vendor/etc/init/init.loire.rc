@@ -36,18 +36,6 @@ on boot
     chown system system /sys/devices/platform/soc/soc:bcmdhd_wlan/macaddr
     chown wifi wifi /sys/module/bcmdhd/parameters/firmware_path
 
-    # Update foreground cpuset now that processors are up
-    write /dev/cpuset/foreground/cpus 0-5
-    write /dev/cpuset/foreground/boost/cpus 4-5
-    write /dev/cpuset/background/cpus 0
-    write /dev/cpuset/system-background/cpus 0-2
-    write /dev/cpuset/top-app/cpus 0-5
-
-    # Set the default IRQ affinity to the primary cluster. When a
-    # CPU is isolated/hotplugged, the IRQ affinity is adjusted
-    # to one of the CPU from the default IRQ affinity mask.
-    write /proc/irq/default_smp_affinity f
-
     # MTP kernel parameters - needed so that swiotlb does not run OOM
     chown system system /sys/module/usb_f_mtp/parameters/mtp_rx_req_len
     chown system system /sys/module/usb_f_mtp/parameters/mtp_tx_req_len

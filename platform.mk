@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+PRODUCT_SHIPPING_API_LEVEL := 26
+
+
 # Platform path
 PLATFORM_COMMON_PATH := device/sony/loire
 
@@ -117,7 +120,6 @@ PRODUCT_COPY_FILES += \
 # Platform specific init
 PRODUCT_PACKAGES += \
     init.loire \
-    init.loire.pwr \
     ueventd
 
 # Fluence
